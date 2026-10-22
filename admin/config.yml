@@ -3,6 +3,7 @@ backend:
   name: github
   repo: hamed0315/pizza-todd
   branch: main
+  auth_endpoint: "" # این خط باعث می‌شود Netlify کاملاً غیرفعال شود و کادر توکن باز شود
 
 media_folder: "public/images/products"
 public_folder: "/images/products"
