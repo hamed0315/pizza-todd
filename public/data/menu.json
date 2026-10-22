@@ -1,133 +1,594 @@
-
 {
   "products": [
     {
-      "id": "pizza-mokhlot", "title": "پیتزا مخلوط", "description": "ژامبون گوشت، مرغ، قارچ، پنیر، فلفل دلمه، زیتون", "category": "pizza", "price": 790000,
-      "sizes": [{"label": "مینی", "price": 420000}, {"label": "تک نفره", "price": 520000}, {"label": "دونفره", "price": 790000}, {"label": "خانواده", "price": 1690000}],
-      "image": "/images/products/pizza-mokhlot.jpg"
+      "id": "pizza-mokhlot",
+      "title": "پیتزا مخلوط",
+      "description": "ژامبون گوشت، مرغ، قارچ، پنیر، فلفل دلمه، زیتون",
+      "category": "pizza",
+      "price": 790000,
+      "image": "/images/products/pizza-mokhlot.jpg",
+      "sizes": [
+        {
+          "label": "مینی",
+          "price": 420000
+        },
+        {
+          "label": "تک نفره",
+          "price": 520000
+        },
+        {
+          "label": "دونفره",
+          "price": 790000
+        },
+        {
+          "label": "خانواده",
+          "price": 1690000
+        }
+      ],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "pizza-chicken", "title": "پیتزا چیکن", "description": "مرغ گریل، قارچ، پنیر، فلفل دلمه، زیتون", "category": "pizza", "price": 990000,
-      "sizes": [{"label": "مینی", "price": 520000}, {"label": "تک نفره", "price": 620000}, {"label": "دونفره", "price": 990000}, {"label": "خانواده", "price": 2080000}],
-      "image": "/images/products/pizza-chicken.jpg", "badges": [{"label": "محبوب", "tone": "hot"}]
+      "id": "pizza-chicken",
+      "title": "پیتزا چیکن",
+      "description": "مرغ گریل، قارچ، پنیر، فلفل دلمه، زیتون",
+      "category": "pizza",
+      "price": 990000,
+      "image": "/images/products/pizza-chicken.jpg",
+      "sizes": [
+        {
+          "label": "مینی",
+          "price": 520000
+        },
+        {
+          "label": "تک نفره",
+          "price": 620000
+        },
+        {
+          "label": "دونفره",
+          "price": 990000
+        },
+        {
+          "label": "خانواده",
+          "price": 2080000
+        }
+      ],
+      "badges": [
+        {
+          "label": "محبوب",
+          "tone": "hot"
+        }
+      ],
+      "featured": false
     },
     {
-      "id": "pizza-alfredo", "title": "پیتزا چیکن آلفردو", "description": "مرغ گریل، سس آلفردو، سیب‌زمینی، قارچ، پنیر", "category": "pizza", "price": 1090000,
-      "sizes": [{"label": "مینی", "price": 620000}, {"label": "تک نفره", "price": 720000}, {"label": "دونفره", "price": 1090000}, {"label": "خانواده", "price": 2280000}],
-      "image": "/images/products/pizza-alfredo.jpg"
+      "id": "pizza-alfredo",
+      "title": "پیتزا چیکن آلفردو",
+      "description": "مرغ گریل، سس آلفردو، سیب‌زمینی، قارچ، پنیر",
+      "category": "pizza",
+      "price": 1090000,
+      "image": "/images/products/classic-burger.jpg",
+      "sizes": [
+        {
+          "label": "مینی",
+          "price": 620000
+        },
+        {
+          "label": "تک نفره",
+          "price": 720000
+        },
+        {
+          "label": "دونفره",
+          "price": 1090000
+        },
+        {
+          "label": "خانواده",
+          "price": 2280000
+        }
+      ],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "pizza-hot-cheese", "title": "پیتزا هات چیز", "description": "ژامبون، هات‌داگ، سیب‌زمینی، پنیر چدار، قارچ", "category": "pizza", "price": 1090000,
-      "sizes": [{"label": "مینی", "price": 620000}, {"label": "تک نفره", "price": 720000}, {"label": "دونفره", "price": 1090000}, {"label": "خانواده", "price": 2280000}],
-      "image": "/images/products/pizza-hot-cheese.jpg", "badges": [{"label": "تند", "tone": "spicy"}]
+      "id": "pizza-hot-cheese",
+      "title": "پیتزا هات چیز",
+      "description": "ژامبون، هات‌داگ، سیب‌زمینی، پنیر چدار، قارچ",
+      "category": "pizza",
+      "price": 1090000,
+      "image": "/images/products/pizza-hot-cheese.jpg",
+      "sizes": [
+        {
+          "label": "مینی",
+          "price": 620000
+        },
+        {
+          "label": "تک نفره",
+          "price": 720000
+        },
+        {
+          "label": "دونفره",
+          "price": 1090000
+        },
+        {
+          "label": "خانواده",
+          "price": 2280000
+        }
+      ],
+      "badges": [
+        {
+          "label": "تند",
+          "tone": "spicy"
+        }
+      ],
+      "featured": false
     },
     {
-      "id": "pizza-roast-beef", "title": "پیتزا رست بیف", "description": "گوشت رست، قارچ، پنیر، فلفل دلمه، زیتون", "category": "pizza", "price": 1250000,
-      "sizes": [{"label": "مینی", "price": 790000}, {"label": "تک نفره", "price": 890000}, {"label": "دونفره", "price": 1250000}, {"label": "خانواده", "price": 2850000}],
-      "image": "/images/products/pizza-roast-beef.jpg"
+      "id": "pizza-roast-beef",
+      "title": "پیتزا رست بیف",
+      "description": "گوشت رست، قارچ، پنیر، فلفل دلمه، زیتون",
+      "category": "pizza",
+      "price": 1250000,
+      "image": "/images/products/pizza-roast-beef.jpg",
+      "sizes": [
+        {
+          "label": "مینی",
+          "price": 790000
+        },
+        {
+          "label": "تک نفره",
+          "price": 890000
+        },
+        {
+          "label": "دونفره",
+          "price": 1250000
+        },
+        {
+          "label": "خانواده",
+          "price": 2850000
+        }
+      ],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "pizza-pepperoni", "title": "پیتزا پپرونی", "description": "پپرونی، قارچ، هالوپینو، پنیر، فلفل دلمه", "category": "pizza", "price": 890000,
-      "sizes": [{"label": "مینی", "price": 490000}, {"label": "تک نفره", "price": 590000}, {"label": "دونفره", "price": 890000}, {"label": "خانواده", "price": 1980000}],
-      "image": "/images/products/pizza-pepperoni.jpg", "badges": [{"label": "پرفروش", "tone": "hot"}], "featured": true
+      "id": "pizza-pepperoni",
+      "title": "پیتزا پپرونی",
+      "description": "پپرونی، قارچ، هالوپینو، پنیر، فلفل دلمه",
+      "category": "pizza",
+      "price": 890000,
+      "image": "/images/products/pizza-pepperoni.jpg",
+      "sizes": [
+        {
+          "label": "مینی",
+          "price": 490000
+        },
+        {
+          "label": "تک نفره",
+          "price": 590000
+        },
+        {
+          "label": "دونفره",
+          "price": 890000
+        },
+        {
+          "label": "خانواده",
+          "price": 1980000
+        }
+      ],
+      "badges": [
+        {
+          "label": "پرفروش",
+          "tone": "hot"
+        }
+      ],
+      "featured": true
     },
     {
-      "id": "pizza-four-seasons", "title": "پیتزا چهارفصل ویژه", "description": "رست بیف، پپرونی، مرغ، ژامبون، قارچ، پنیر", "category": "pizza", "price": 2650000,
-      "sizes": [{"label": "دونفره", "price": 2650000}, {"label": "خانواده", "price": 2650000}],
-      "image": "/images/products/pizza-four-seasons.jpg", "badges": [{"label": "ویژه", "tone": "new"}]
+      "id": "pizza-four-seasons",
+      "title": "پیتزا چهارفصل ویژه",
+      "description": "رست بیف، پپرونی، مرغ، ژامبون، قارچ، پنیر",
+      "category": "pizza",
+      "price": 2650000,
+      "image": "/images/products/pizza-four-seasons.jpg",
+      "sizes": [
+        {
+          "label": "دونفره",
+          "price": 2650000
+        },
+        {
+          "label": "خانواده",
+          "price": 2650000
+        }
+      ],
+      "badges": [
+        {
+          "label": "ویژه",
+          "tone": "new"
+        }
+      ],
+      "featured": false
     },
     {
-      "id": "pizza-armeni", "title": "پیتزا ارمنی شکاری", "description": "بیکن، سوسیس شکاری، گوشت همبر، قارچ، پنیر", "category": "pizza", "price": 1250000,
-      "sizes": [{"label": "دونفره", "price": 1250000}, {"label": "خانواده", "price": 2650000}],
-      "image": "/images/products/pizza-armeni.jpg"
+      "id": "pizza-armeni",
+      "title": "پیتزا ارمنی شکاری",
+      "description": "بیکن، سوسیس شکاری، گوشت همبر، قارچ، پنیر",
+      "category": "pizza",
+      "price": 1250000,
+      "image": "/images/products/pizza-armeni.jpg",
+      "sizes": [
+        {
+          "label": "دونفره",
+          "price": 1250000
+        },
+        {
+          "label": "خانواده",
+          "price": 2650000
+        }
+      ],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "pizza-mushroom-meat", "title": "پیتزا قارچ و گوشت", "description": "برگر گریل، پنیر، قارچ، سس مخصوص، فلفل دلمه، زیتون", "category": "pizza", "price": 1090000,
-      "sizes": [{"label": "مینی", "price": 650000}, {"label": "تک نفره", "price": 790000}, {"label": "دونفره", "price": 1090000}, {"label": "خانواده", "price": 2550000}],
-      "image": "/images/products/pizza-mokhlot.jpg"
+      "id": "pizza-mushroom-meat",
+      "title": "پیتزا قارچ و گوشت",
+      "description": "برگر گریل، پنیر، قارچ، سس مخصوص، فلفل دلمه، زیتون",
+      "category": "pizza",
+      "price": 1090000,
+      "image": "/images/products/pizza-mokhlot.jpg",
+      "sizes": [
+        {
+          "label": "مینی",
+          "price": 650000
+        },
+        {
+          "label": "تک نفره",
+          "price": 790000
+        },
+        {
+          "label": "دونفره",
+          "price": 1090000
+        },
+        {
+          "label": "خانواده",
+          "price": 2550000
+        }
+      ],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "pizza-beef-stroganoff", "title": "پیتزا بیف استراگانف", "description": "رست بیف، سس آلفردو، قارچ، پنیر، فلفل دلمه، زیتون", "category": "pizza", "price": 1350000,
-      "sizes": [{"label": "مینی", "price": 890000}, {"label": "تک نفره", "price": 990000}, {"label": "دونفره", "price": 1350000}, {"label": "خانواده", "price": 2990000}],
-      "image": "/images/products/pizza-roast-beef.jpg"
+      "id": "pizza-beef-stroganoff",
+      "title": "پیتزا بیف استراگانف",
+      "description": "رست بیف، سس آلفردو، قارچ، پنیر، فلفل دلمه، زیتون",
+      "category": "pizza",
+      "price": 1350000,
+      "image": "/images/products/pizza-roast-beef.jpg",
+      "sizes": [
+        {
+          "label": "مینی",
+          "price": 890000
+        },
+        {
+          "label": "تک نفره",
+          "price": 990000
+        },
+        {
+          "label": "دونفره",
+          "price": 1350000
+        },
+        {
+          "label": "خانواده",
+          "price": 2990000
+        }
+      ],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "classic-burger", "title": "برگر کلاسیک", "description": "برگر گوشت ۱۰۰٪، کاهو، گوجه، خیارشور، نون مک، سس، سیب تنوری", "category": "burger", "price": 480000, "image": "/images/products/classic-burger.jpg"
+      "id": "classic-burger",
+      "title": "برگر کلاسیک",
+      "description": "برگر گوشت ۱۰۰٪، کاهو، گوجه، خیارشور، نون مک، سس، سیب تنوری",
+      "category": "burger",
+      "price": 480000,
+      "image": "/images/products/classic-burger.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "mushroom-burger", "title": "ماشروم برگر", "description": "برگر گوشت ۱۰۰٪، سس آلفردو، قارچ، کاهو، سیب تنوری", "category": "burger", "price": 580000, "image": "/images/products/mushroom-burger.jpg"
+      "id": "mushroom-burger",
+      "title": "ماشروم برگر",
+      "description": "برگر گوشت ۱۰۰٪، سس آلفردو، قارچ، کاهو، سیب تنوری",
+      "category": "burger",
+      "price": 580000,
+      "image": "/images/products/mushroom-burger.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "mushroom-zinger", "title": "ماشروم زینگر", "description": "فیله استریپس، سس آلفردو، کاهو، گوجه، سیب تنوری", "category": "burger", "price": 580000, "image": "/images/products/snack-chicken.jpg"
+      "id": "mushroom-zinger",
+      "title": "ماشروم زینگر",
+      "description": "فیله استریپس، سس آلفردو، کاهو، گوجه، سیب تنوری",
+      "category": "burger",
+      "price": 580000,
+      "image": "/images/products/snack-chicken.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "double-down", "title": "دبل دان برگر", "description": "برگر گوشت ۱۰۰٪، فیله استریپس، پنیر گودا، سس آلفردو، سیب تنوری", "category": "burger", "price": 890000, "image": "/images/products/double-down.jpg"
+      "id": "double-down",
+      "title": "دبل دان برگر",
+      "description": "برگر گوشت ۱۰۰٪، فیله استریپس، پنیر گودا، سس آلفردو، سیب تنوری",
+      "category": "burger",
+      "price": 890000,
+      "image": "/images/products/double-down.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "chorizo-burger", "title": "چوریتسو برگر", "description": "برگر گوشت ۱۰۰٪، سوسیس چوریتسو، پنیر گودا، سیب تنوری", "category": "burger", "price": 850000, "image": "/images/products/chorizo-burger.jpg"
+      "id": "chorizo-burger",
+      "title": "چوریتسو برگر",
+      "description": "برگر گوشت ۱۰۰٪، سوسیس چوریتسو، پنیر گودا، سیب تنوری",
+      "category": "burger",
+      "price": 850000,
+      "image": "/images/products/chorizo-burger.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "double-cheese-burger", "title": "دبل چیز برگر", "description": "همبرگر ۱۰۰٪ ۲ عدد، پنیر گودا ۲ لایه، پنیر موزارلا ۳ لایه، گوجه، کاهو، خیارشور، سیب تنوری", "category": "burger", "price": 980000, "image": "/images/products/double-down.jpg", "badges": [{"label": "جدید", "tone": "new"}]
+      "id": "double-cheese-burger",
+      "title": "دبل چیز برگر",
+      "description": "همبرگر ۱۰۰٪ ۲ عدد، پنیر گودا ۲ لایه، پنیر موزارلا ۳ لایه، گوجه، کاهو، خیارشور، سیب تنوری",
+      "category": "burger",
+      "price": 980000,
+      "image": "/images/products/double-down.jpg",
+      "sizes": [],
+      "badges": [
+        {
+          "label": "جدید",
+          "tone": "new"
+        }
+      ],
+      "featured": false
     },
     {
-      "id": "hot-dog", "title": "هات داگ", "description": "هات‌داگ، نون ۳۰ سانتی، کاهو، گوجه", "category": "sandwich", "price": 350000, "image": "/images/products/hot-dog.jpg"
+      "id": "hot-dog",
+      "title": "هات داگ",
+      "description": "هات‌داگ، نون ۳۰ سانتی، کاهو، گوجه",
+      "category": "sandwich",
+      "price": 350000,
+      "image": "/images/products/hot-dog.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "hot-dog-special", "title": "هات داگ ویژه", "description": "هات‌داگ، قارچ و پنیر، کاهو، گوجه", "category": "sandwich", "price": 490000, "image": "/images/products/hot-dog-special.jpg"
+      "id": "hot-dog-special",
+      "title": "هات داگ ویژه",
+      "description": "هات‌داگ، قارچ و پنیر، کاهو، گوجه",
+      "category": "sandwich",
+      "price": 490000,
+      "image": "/images/products/hot-dog-special.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "cold-sandwich", "title": "ساندویچ سرد", "description": "ژامبون گوشت و مرغ، نون ۳۰ سانتی، کاهو، گوجه، مایونز", "category": "sandwich", "price": 490000, "image": "/images/products/cold-sandwich.jpg"
+      "id": "cold-sandwich",
+      "title": "ساندویچ سرد",
+      "description": "ژامبون گوشت و مرغ، نون ۳۰ سانتی، کاهو، گوجه، مایونز",
+      "category": "sandwich",
+      "price": 490000,
+      "image": "/images/products/cold-sandwich.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "ham-sandwich", "title": "ساندویچ ژامبون تنوری", "description": "ژامبون تنوری، قارچ، پنیر، کاهو", "category": "sandwich", "price": 590000, "image": "/images/products/ham-sandwich.jpg"
+      "id": "ham-sandwich",
+      "title": "ساندویچ ژامبون تنوری",
+      "description": "ژامبون تنوری، قارچ، پنیر، کاهو",
+      "category": "sandwich",
+      "price": 590000,
+      "image": "/images/products/ham-sandwich.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "hot-dog-tandoori", "title": "هات داگ تنوری", "description": "ژامبون گوشت، ژامبون تنوری، پنیر", "category": "sandwich", "price": 690000, "image": "/images/products/hot-dog.jpg"
+      "id": "hot-dog-tandoori",
+      "title": "هات داگ تنوری",
+      "description": "ژامبون گوشت، ژامبون تنوری، پنیر",
+      "category": "sandwich",
+      "price": 690000,
+      "image": "/images/products/hot-dog.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "monster-sandwich", "title": "ساندویچ ویژه هیولا", "description": "برگر، ژامبون، هات‌داگ، فیله گریل، نون ۳۰ سانتی، قارچ", "category": "sandwich", "price": 990000, "image": "/images/products/monster-sandwich.jpg", "badges": [{"label": "ویژه", "tone": "new"}]
+      "id": "monster-sandwich",
+      "title": "ساندویچ ویژه هیولا",
+      "description": "برگر، ژامبون، هات‌داگ، فیله گریل، نون ۳۰ سانتی، قارچ",
+      "category": "sandwich",
+      "price": 990000,
+      "image": "/images/products/monster-sandwich.jpg",
+      "sizes": [],
+      "badges": [
+        {
+          "label": "ویژه",
+          "tone": "new"
+        }
+      ],
+      "featured": false
     },
     {
-      "id": "snack-mokhlot", "title": "اسنک مخلوط", "description": "ژامبون گوشت، مرغ، قارچ، پنیر، فلفل دلمه، سس", "category": "fried", "price": 350000, "image": "/images/products/snack-mokhlot.jpg"
+      "id": "snack-mokhlot",
+      "title": "اسنک مخلوط",
+      "description": "ژامبون گوشت، مرغ، قارچ، پنیر، فلفل دلمه، سس",
+      "category": "fried",
+      "price": 350000,
+      "image": "/images/products/snack-mokhlot.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "snack-chicken", "title": "اسنک چیکن", "description": "مرغ گریل، قارچ، پنیر، فلفل دلمه، سس", "category": "fried", "price": 390000, "image": "/images/products/snack-chicken.jpg"
+      "id": "snack-chicken",
+      "title": "اسنک چیکن",
+      "description": "مرغ گریل، قارچ، پنیر، فلفل دلمه، سس",
+      "category": "fried",
+      "price": 390000,
+      "image": "/images/products/snack-chicken.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "snack-four-seasons", "title": "اسنک چهارفصل", "description": "رست بیف، مرغ، ژامبون، پپرونی، قارچ، پنیر", "category": "fried", "price": 450000, "image": "/images/products/snack-four-seasons.jpg"
+      "id": "snack-four-seasons",
+      "title": "اسنک چهارفصل",
+      "description": "رست بیف، مرغ، ژامبون، پپرونی، قارچ، پنیر",
+      "category": "fried",
+      "price": 450000,
+      "image": "/images/products/snack-four-seasons.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "strips-2", "title": "فیله استریپس (۲ تیکه)", "description": "فیله سوخاری، سیب‌زمینی، سالاد کلم، نان مک، سس", "category": "fried", "price": 650000, "image": "/images/products/strips.jpg"
+      "id": "strips-2",
+      "title": "فیله استریپس (۲ تیکه)",
+      "description": "فیله سوخاری، سیب‌زمینی، سالاد کلم، نان مک، سس",
+      "category": "fried",
+      "price": 650000,
+      "image": "/images/products/strips.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "strips-4", "title": "فیله استریپس (۴ تیکه)", "description": "فیله سوخاری، سیب‌زمینی، سالاد کلم، نان مک، سس", "category": "fried", "price": 890000, "image": "/images/products/strips.jpg"
+      "id": "strips-4",
+      "title": "فیله استریپس (۴ تیکه)",
+      "description": "فیله سوخاری، سیب‌زمینی، سالاد کلم، نان مک، سس",
+      "category": "fried",
+      "price": 890000,
+      "image": "/images/products/strips.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "wings", "title": "بال و بازو سوخاری (۶ تیکه)", "description": "بال و بازو، سیب‌زمینی، سالاد کلم، نان مک، سس", "category": "fried", "price": 750000, "image": "/images/products/wings.jpg"
+      "id": "wings",
+      "title": "بال و بازو سوخاری (۶ تیکه)",
+      "description": "بال و بازو، سیب‌زمینی، سالاد کلم، نان مک، سس",
+      "category": "fried",
+      "price": 750000,
+      "image": "/images/products/wings.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "sokhari-combo", "title": "سوخاری ترکیبی (۲+۲+۲)", "description": "۲ عدد استریپس، ۲ عدد بال و بازو، سیب‌زمینی، سالاد کلم", "category": "fried", "price": 950000, "image": "/images/products/sokhari-combo.jpg", "badges": [{"label": "پرفروش", "tone": "hot"}]
+      "id": "sokhari-combo",
+      "title": "سوخاری ترکیبی (۲+۲+۲)",
+      "description": "۲ عدد استریپس، ۲ عدد بال و بازو، سیب‌زمینی، سالاد کلم",
+      "category": "fried",
+      "price": 950000,
+      "image": "/images/products/sokhari-combo.jpg",
+      "sizes": [],
+      "badges": [
+        {
+          "label": "پرفروش",
+          "tone": "hot"
+        }
+      ],
+      "featured": false
     },
     {
-      "id": "mushroom-fried", "title": "قارچ سوخاری ۲۵۰ گرمی", "description": "قارچ سوخاری با سس مخصوص", "category": "fried", "price": 390000, "image": "/images/products/fries.jpg"
+      "id": "mushroom-fried",
+      "title": "قارچ سوخاری ۲۵۰ گرمی",
+      "description": "قارچ سوخاری با سس مخصوص",
+      "category": "fried",
+      "price": 390000,
+      "image": "/images/products/fries.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "caesar-fried", "title": "سالاد سزار (سوخاری)", "description": "فیله سوخاری، کاهو، سس سزار، پنیر پارمسان، گوجه، زیتون، نون سیر", "category": "salad", "price": 650000, "image": "/images/products/caesar-fried.jpg"
+      "id": "caesar-fried",
+      "title": "سالاد سزار (سوخاری)",
+      "description": "فیله سوخاری، کاهو، سس سزار، پنیر پارمسان، گوجه، زیتون، نون سیر",
+      "category": "salad",
+      "price": 650000,
+      "image": "/images/products/caesar-fried.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "caesar-grilled", "title": "سالاد سزار (گریل)", "description": "فیله گریل، کاهو، سس سزار، پنیر پارمسان، گوجه، زیتون، نون سیر", "category": "salad", "price": 590000, "image": "/images/products/caesar-grilled.jpg"
+      "id": "caesar-grilled",
+      "title": "سالاد سزار (گریل)",
+      "description": "فیله گریل، کاهو، سس سزار، پنیر پارمسان، گوجه، زیتون، نون سیر",
+      "category": "salad",
+      "price": 590000,
+      "image": "/images/products/caesar-grilled.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "fries-alfredo", "title": "سیب زمینی با سس آلفردو", "description": "سیب‌زمینی سرخ شده با سس آلفردو مخصوص", "category": "sides", "price": 390000, "image": "/images/products/fries.jpg"
+      "id": "fries-alfredo",
+      "title": "سیب زمینی با سس آلفردو",
+      "description": "سیب‌زمینی سرخ شده با سس آلفردو مخصوص",
+      "category": "sides",
+      "price": 390000,
+      "image": "/images/products/fries.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "dip-sauce", "title": "سس دیپ (پنیر گودا)", "description": "سس دیپ پنیر گودا", "category": "sides", "price": 200000, "image": "/images/products/fries.jpg"
+      "id": "dip-sauce",
+      "title": "سس دیپ (پنیر گودا)",
+      "description": "سس دیپ پنیر گودا",
+      "category": "sides",
+      "price": 200000,
+      "image": "/images/products/fries.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "hot-plate", "title": "بشقاب داغ دونفره", "description": "سیب‌زمینی سرخ شده، بیکن ارمنی، پنیر، قارچ، فلفل دلمه", "category": "sides", "price": 890000, "image": "/images/products/fries.jpg"
+      "id": "hot-plate",
+      "title": "بشقاب داغ دونفره",
+      "description": "سیب‌زمینی سرخ شده، بیکن ارمنی، پنیر، قارچ، فلفل دلمه",
+      "category": "sides",
+      "price": 890000,
+      "image": "/images/products/fries.jpg",
+      "sizes": [],
+      "badges": [],
+      "featured": false
     },
     {
-      "id": "party-tray", "title": "سینی دورهمی ۶ الی ۸ نفره", "description": "پیتزا مخلوط، فیله سوخاری، بال و بازو سوخاری، قارچ سوخاری، همبرگر، هات داگ، سیب زمینی سرخ شده، سیب تنوری، اسنک، پک سس مخصوص، نان مک", "category": "sides", "price": 3200000, "image": "/images/products/pizza-mokhlot.jpg", "badges": [{"label": "ویژه", "tone": "new"}]
+      "id": "party-tray",
+      "title": "سینی دورهمی ۶ الی ۸ نفره",
+      "description": "پیتزا مخلوط، فیله سوخاری، بال و بازو سوخاری، قارچ سوخاری، همبرگر، هات داگ، سیب زمینی سرخ شده، سیب تنوری، اسنک، پک سس مخصوص، نان مک",
+      "category": "sides",
+      "price": 3200000,
+      "image": "/images/products/pizza-mokhlot.jpg",
+      "sizes": [],
+      "badges": [
+        {
+          "label": "ویژه",
+          "tone": "new"
+        }
+      ],
+      "featured": false
     }
   ]
 }
