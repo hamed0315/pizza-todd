@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PIZZA PAZ Menu</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+@page { size: A4 portrait; margin: 0; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #242424;
+  color: #f7ead0;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 20px auto;
+  padding: 8mm;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 0%, #38302a 0%, transparent 60%),
+    repeating-linear-gradient(135deg,#171717 0,#171717 3px,#1b1b1b 3px,#1b1b1b 6px);
+  border: 2px solid #b52b25;
+  outline: 1px solid #c49a4a;
+  outline-offset: -5px;
+}
+
+.header {
+  text-align: center;
+  border-bottom: 2px solid #b52b25;
+  padding: 2mm 0 5mm;
+  margin-bottom: 5mm;
+}
+
+.logo {
+  direction: ltr;
+  font-family: Georgia, serif;
+  font-size: 37pt;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #d6ad61;
+  text-shadow: 2px 2px #7f1717;
+  line-height: 1.15;
+}
+
+.tagline {
+  color: #eee0c3;
+  font-size: 9pt;
+  letter-spacing: 3px;
+  direction: ltr;
+}
+
+.subtitle {
+  color: #d7b56f;
+  font-size: 11pt;
+  margin-top: 3mm;
+  font-weight: 700;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 4mm;
+  align-items: start;
+}
+
+.section-title {
+  background: #8f201d;
+  border-right: 4px solid #d6ad61;
+  padding: 2mm 3mm;
+  margin-bottom: 3mm;
+  font-size: 13pt;
+  font-weight: 900;
+  color: #fff0d2;
+}
+
+.item {
+  margin-bottom: 3.3mm;
+  padding-bottom: 2.3mm;
+  border-bottom: 1px dashed #77603b;
+  break-inside: avoid;
+}
+
+.item h3 {
+  margin: 0 0 1mm;
+  font-size: 9.5pt;
+  font-weight: 800;
+  color: #e8bf70;
+}
+
+.item p {
+  margin: 0;
+  font-size: 7.4pt;
+  line-height: 1.75;
+  color: #e4ded3;
+}
+
+.footer {
+  margin-top: 3mm;
+  padding-top: 3mm;
+  border-top: 2px solid #b52b25;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3mm;
+  align-items: center;
+  text-align: center;
+}
+
+.qr {
+  width: 25mm;
+  height: 25mm;
+  object-fit: contain;
+  background: white;
+  padding: 1mm;
+  display: block;
+  margin: 0 auto 1mm;
+}
+
+.footer-label {
+  color: #d6ad61;
+  font-size: 8pt;
+  font-weight: 800;
+}
+
+.footer-text {
+  font-size: 7.5pt;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+@media screen {
+  .page { box-shadow: 0 10px 40px #000; }
+}
+
+@media print {
+  body { background: none; }
+  .page { margin: 0; box-shadow: none; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="header">
+    <div class="logo">PIZZA PAZ</div>
+    <div class="tagline">GOOD FOOD · GOOD MOOD</div>
+    <div class="subtitle">منوی ویژه | طعمی متفاوت، کیفیتی ماندگار</div>
+  </header>
+
+  <div class="columns">
+    <section>
+      <div class="section-title">🍕 پیتزا</div>
+
+      <article class="item">
+        <h3>پیتزا مخلوط</h3>
+        <p>ژامبون گوشت ۸۰٪، ژامبون مرغ ۸۰٪، قارچ، پنیر، فلفل دلمه و زیتون اسلایسی</p>
+      </article>
+      <article class="item">
+        <h3>پیتزا چیکن</h3>
+        <p>مرغ گریل، قارچ، پنیر، فلفل دلمه و زیتون اسلایسی</p>
+      </article>
+      <article class="item">
+        <h3>پیتزا چیکن آلفردو</h3>
+        <p>مرغ گریل، قارچ، پنیر، سس آلفردو، سیب‌زمینی رشته‌ای، فلفل دلمه و زیتون</p>
+      </article>
+      <article class="item">
+        <h3>پیتزا هات چیز</h3>
+        <p>ژامبون گوشت و مرغ ۸۰٪، هات‌داگ دبل‌چیز، سیب‌زمینی سرخ‌شده، پنیر چدار، قارچ، فلفل دلمه و زیتون</p>
+      </article>
+      <article class="item">
+        <h3>پیتزا رست بیف</h3>
+        <p>گوشت رست، قارچ، پنیر، فلفل دلمه و زیتون اسلایسی</p>
+      </article>
+      <article class="item">
+        <h3>پیتزا پپرونی</h3>
+        <p>کالباس پپرونی ۸۰٪، قارچ، فلفل هالوپینو، پنیر، فلفل دلمه و زیتون</p>
+      </article>
+      <article class="item">
+        <h3>پیتزا چهار فصل ویژه</h3>
+        <p>گوشت رست بیف، کالباس پپرونی، مرغ گریل، ژامبون گوشت و مرغ ۸۰٪، قارچ، پنیر، فلفل دلمه و زیتون</p>
+      </article>
+      <article class="item
+
+">
+        <h3>پیتزا ارمنی شکاری</h3>
+        <p>بیکن ارمنی، سوسیس شکاری، گوشت همبرگر ۱۰۰٪، قارچ، پنیر، فلفل دلمه و زیتون</p>
+      </article>
+      <article class="item">
+        <h3>پیتزا قارچ و گوشت</h3>
+        <p>برگر گریل‌شده، پنیر، قارچ، سس مخصوص، فلفل دلمه و زیتون اسلایسی</p>
+      </article>
+      <article class="item">
+        <h3>پیتزا بیف استراگانوف</h3>
+        <p>رست بیف، سس آلفردو، قارچ، پنیر، فلفل دلمه و زیتون اسلایسی</p>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-title">🍔 برگر</div>
+
+      <article class="item">
+        <h3>برگر کلاسیک</h3>
+        <p>برگر گوشت ۱۰۰٪، کاهو، گوجه، خیارشور، نان مک و سس مخصوص</p>
+      </article>
+      <article class="item">
+        <h3>ماشروم برگر</h3>
+        <p>برگر گوشت ۱۰۰٪، سس آلفردو، کاهو، گوجه، خیارشور، نان مک و سس مخصوص</p>
+      </article>
+      <article class="item">
+        <h3>ماشروم زینگر</h3>
+        <p>فیله استریپس، سس آلفردو، کاهو، گوجه، خیارشور، نان مک و سس مخصوص</p>
+      </article>
+      <article class="item">
+        <h3>دبل دان برگر</h3>
+        <p>برگر گوشت ۱۰۰٪، فیله استریپس، پنیر گودا، سس آلفردو، کاهو، گوجه، خیارشور، نان مک و سس مخصوص</p>
+      </article>
+      <article class="item">
+        <h3>چوریتسو برگر</h3>
+        <p>برگر گوشت ۱۰۰٪، سوسیس چوریتسو، پنیر گودا، کاهو، گوجه، خیارشور، نان مک و سس مخصوص</p>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-title">🥪 ساندویچ</div>
+
+      <article class="item">
+        <h3>هات‌داگ</h3>
+        <p>هات‌داگ ۸۰٪، نان ۳۰ سانتی، کاهو، گوجه، خیارشور و سس مخصوص</p>
+      </article>
+      <article class="item">
+        <h3>هات‌داگ ویژه</h3>
+        <p>هات‌داگ ۸۰٪، نان ۳۰ سانتی، قارچ و پنیر، کاهو، گوجه، خیارشور و سس مخصوص</p>
+      </article>
+      <article class="item">
+        <h3>ساندویچ سرد</h3>
+        <p>ژامبون گوشت و مرغ ۸۰٪، نان ۳۰ سانتی، کاهو، گوجه، خیارشور و سس مایونز</p>
+      </article>
+      <article class="item">
+        <h3>ساندویچ ژامبون تنوری</h3>
+        <p>ژامبون گوشت تنوری ۸۰٪، قارچ، پنیر، کاهو، گوجه، خیارشور و سس مخصوص</p>
+      </article>
+      <article class="item">
+        <h3>ساندویچ ویژه هیولای دونفره</h3>
+        <p>برگر گوشت ۱۰۰٪، ژامبون گوشت تنوری ۸۰٪، هات‌داگ ۸۰٪، فیله گریل، قارچ و پنیر، کاهو، گوجه، خیارشور و سس مخصوص</p>
+      </article>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div>
+      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=500x500&amp;data=https%3A%2F%2Fpizza-paz.ir" alt="QR code">
+      <div class="footer-label">منوی آنلاین</div>
+      <div class="footer-text">pizza-paz.ir</div>
+    </div>
+    <div>
+      <div class="footer-label">آدرس</div>
+      <div class="footer-text">گوهردشت، خیابان اصلی، ۱۲ شرقی</div>
+    </div>
+    <div>
+      <div class="footer-label">سفارش و تماس</div>
+      <div class="footer-text" dir="ltr">09134927300</div>
+    </div>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,42 @@
+
+backend:
+  name: github
+  repo: hamed0315/pizza-todd
+  branch: main
+
+media_folder: "public/images/products"
+public_folder: "/images/products"
+
+collections:
+  - name: "menu"
+    label: "منوی غذا"
+    files:
+      - label: "آیتم‌های منو"
+        name: "products"
+        file: "public/data/menu.json"
+        fields:
+          - label: "محصولات"
+            name: "products"
+            widget: "list"
+            fields:
+              - {label: "شناسه (ID)", name: "id", widget: "string"}
+              - {label: "نام غذا", name: "title", widget: "string"}
+              - {label: "توضیحات", name: "description", widget: "text"}
+              - {label: "دسته‌بندی", name: "category", widget: "select", options: ["pizza", "burger", "sandwich", "fried", "salad", "sides"]}
+              - {label: "قیمت پایه (تومان)", name: "price", widget: "number"}
+              - {label: "تصویر غذا", name: "image", widget: "image"}
+              - label: "سایزها (فقط برای پیتزا)"
+                name: "sizes"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "نام سایز", name: "label", widget: "string"}
+                  - {label: "قیمت", name: "price", widget: "number"}
+              - label: "برچسب (مثل تند، پرفروش)"
+                name: "badges"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "متن", name: "label", widget: "string"}
+                  - {label: "رنگ", name: "tone", widget: "select", options: ["spicy", "hot", "new", "veggie"]}
+              - {label: "پیشنهاد ویژه؟", name: "featured", widget: "boolean", required: false}

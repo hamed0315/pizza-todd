@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PIZZA PAZ | منوی رستوران</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+  --bg:#050708;
+  --red:#f01820;
+  --gold:#ffb000;
+  --white:#fffaf2;
+  --muted:#d8d5d0;
+}
+*{box-sizing:border-box}
+@page{size:A4 portrait;margin:0}
+html,body{margin:0;padding:0; background: #000;}
+body{
+  color:var(--white);
+  font-family:"Vazirmatn",Tahoma,sans-serif;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+.page{
+  width:210mm;height:297mm;
+  margin:10px auto;
+  padding:0;
+  position:relative;
+  overflow:hidden;
+  background: #080808;
+  border:1mm solid #222;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+/* بافت پس زمینه */
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+/* گرادیانت های نوری */
+.page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 10%, rgba(240, 24, 32, 0.15), transparent 40%),
+              radial-gradient(circle at 20% 90%, rgba(255, 176, 0, 0.1), transparent 40%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* تصاویر شناور پس‌زمینه */
+.bg-img-pizza {
+  position: absolute; top: -5%; right: -10%; width: 70%; height: 50%;
+  background: url('/images/products/pizza-mokhlot.jpg') center/cover;
+  -webkit-mask-image: radial-gradient(circle, black 30%, transparent 70%);
+  mask-image: radial-gradient(circle, black 30%, transparent 70%);
+  opacity: 0.4; z-index: 0; mix-blend-mode: screen; pointer-events: none;
+}
+.bg-img-burger {
+  position: absolute; bottom: 5%; left: -10%; width: 60%; height: 40%;
+  background: url('/images/products/classic-burger.jpg') center/cover;
+  -webkit-mask-image: radial-gradient(circle, black 20%, transparent 60%);
+  mask-image: radial-gradient(circle, black 20%, transparent 60%);
+  opacity: 0.3; z-index: 0; mix-blend-mode: screen; pointer-events: none;
+}
+
+.inner{position:relative;z-index:1;height:100%; display: flex; flex-direction: column; padding: 8mm;}
+
+/* هدر فوق العاده شیک */
+.header{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom: 5mm; padding-bottom: 3mm;
+  border-bottom: 0.5mm solid rgba(255,176,0,0.3);
+  flex-shrink: 0;
+}
+.brand-block { display: flex; align-items: center; gap: 4mm; }
+.logo-wrap {
+  width: 24mm; height: 24mm; border-radius: 50%;
+  border: 0.8mm solid var(--red); padding: 1mm;
+  background: radial-gradient(circle, #222, #000);
+  box-shadow: 0 0 15px rgba(240,24,32,0.5);
+}
+.logo-wrap img { width: 100%; height: 100%; object-fit: contain; }
+.brand-text h1 {
+  margin: 0; font-size: 10mm; font-weight: 900; line-height: 1; letter-spacing: 1mm; direction: ltr;
+  text-shadow: 2px 2px 0 #000, 0 0 10px rgba(255,255,255,0.2);
+}
+.brand-text h1 span { color: var(--gold); }
+.brand-text p { margin: 1mm 0 0 0; font-size: 2.5mm; color: #aaa; letter-spacing: 2px; }
+
+.slogan-block { text-align: left; direction: ltr; transform: rotate(-5deg); }
+.slogan-block h2 { margin: 0; font-size: 8mm; font-family: serif; font-style: italic; color: var(--gold); line-height: 0.9; text-shadow: 2px 2px 4px #000; }
+.slogan-block h2 span { font-size: 5mm; color: #fff; }
+
+/* گرید اصلی */
+.columns{
+  display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm; align-items:stretch; flex-grow: 1;
+}
+.col-flex { display: flex; flex-direction: column; gap: 3mm; }
+.section{
+  background:rgba(10,10,10,0.85); backdrop-filter: blur(4px);
+  border:.3mm solid rgba(255,255,255,0.1);
+  border-radius:3mm; padding:2mm;
+  display: flex; flex-direction: column; flex-grow: 1;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+.section-title{
+  min-height:10mm; margin:-2mm -2mm 2mm; padding:1.5mm;
+  display:flex; align-items:center; justify-content:center;
+  font-size:4.5mm; font-weight:900; color: #fff;
+  background: linear-gradient(90deg, transparent, rgba(240,24,32,0.8), transparent);
+  text-shadow: 1px 1px 2px #000; border-bottom: 0.3mm solid rgba(255,255,255,0.2);
+}
+.section.gold .section-title {
+  background: linear-gradient(90deg, transparent, rgba(255,176,0,0.8), transparent);
+  color: #000; text-shadow: none;
+}
+
+.item{
+  padding:1.5mm 0; border-bottom:.2mm dashed rgba(255,255,255,0.15);
+}
+.item:last-child{border-bottom:0}
+.item-head{display:flex;justify-content:space-between;align-items:baseline;gap:1mm;}
+.item-name{font-size:3.2mm;font-weight:800;color:#fff;line-height:1.3;}
+.price{font-size:3mm;font-weight:900;color:var(--gold);direction:ltr;white-space:nowrap;}
+.desc{margin-top:0.5mm;color:#aaa;font-size:1.9mm;line-height:1.5; font-weight:400;}
+.sizes{
+  margin-top:1mm; color:var(--gold); font-size:2.2mm; font-weight:800; direction:ltr; text-align:left;
+  background: rgba(255,176,0,0.1); padding: 0.5mm 1mm; border-radius: 1mm; display: inline-block;
+}
+
+/* فوتر */
+.footer{
+  display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:3mm; margin-top:4mm; flex-shrink: 0;
+}
+.info{
+  border:.3mm solid rgba(255,255,255,0.1); border-radius:2mm;
+  padding:2mm; background:rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+.info h3{margin:0 0 1mm;color:var(--gold);font-size:2.8mm; font-weight:800;}
+.info p{margin:0;font-size:2.5mm;line-height:1.6; color: #ddd;}
+.phone{font-size:4mm!important; font-weight:900; letter-spacing: 1px; direction: ltr;}
+.qr{width:16mm;height:16mm;background:#fff;padding:1mm;border-radius:1mm;}
+.qr-label{font-size:1.8mm!important;direction:ltr;color:var(--gold);}
+
+@media print{
+  body{background:#fff}
+  .page{margin:0;box-shadow:none;page-break-after:always; border: none;}
+  .page:last-child{page-break-after:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- صفحه اول -->
+<main class="page">
+  <div class="bg-img-pizza"></div>
+  <div class="bg-img-burger"></div>
+  <div class="inner">
+    <header class="header">
+      <div class="brand-block">
+        <div class="logo-wrap"><img src="/images/chef-hero.png" alt="Chef"></div>
+        <div class="brand-text">
+          <h1>PIZZA <span>PAZ</span></h1>
+          <p>منوی رسمی رستوران</p>
+        </div>
+      </div>
+      <div class="slogan-block">
+        <h2>Good Food<br><span>Good Mood</span></h2>
+      </div>
+    </header>
+
+    <div class="columns">
+      <!-- ستون ۱ -->
+      <div class="col-flex">
+        <section class="section">
+          <div class="section-title">🍕 پیتزاها</div>
+          <article class="item">
+            <div class="item-name">پیتزا مخلوط</div>
+            <div class="desc">ژامبون گوشت و مرغ، قارچ، پنیر، فلفل دلمه، زیتون</div>
+            <div class="sizes">M:420 | S:520 | D:790 | F:1690 T</div>
+          </article>
+          <article class="item">
+            <div class="item-name">پیتزا چیکن</div>
+            <div class="desc">مرغ گریل، قارچ، پنیر، فلفل دلمه، زیتون</div>
+            <div class="sizes">M:520 | S:620 | D:990 | F:2080 T</div>
+          </article>
+          <article class="item">
+            <div class="item-name">پیتزا چیکن آلفردو</div>
+            <div class="desc">مرغ گریل، سس آلفردو، سیب‌زمینی، قارچ، پنیر</div>
+            <div class="sizes">M:620 | S:720 | D:1090 | F:2280 T</div>
+          </article>
+          <article class="item">
+            <div class="item-name">پیتزا هات چیز</div>
+            <div class="desc">ژامبون، هات‌داگ، سیب‌زمینی، پنیر چدار، قارچ</div>
+            <div class="sizes">M:620 | S:720 | D:1090 | F:2280 T</div>
+          </article>
+          <article class="item">
+            <div class="item-name">پیتزا رست بیف</div>
+            <div class="desc">گوشت رست، قارچ، پنیر، فلفل دلمه، زیتون</div>
+            <div class="sizes">M:790 | S:890 | D:1250 | F:2850 T</div>
+          </article>
+          <article class="item">
+            <div class="item-name">پیتزا پپرونی</div>
+            <div class="desc">پپرونی، قارچ، هالوپینو، پنیر، فلفل دلمه</div>
+            <div class="sizes">M:490 | S:590 | D:890 | F:1980 T</div>
+          </article>
+          <article class="item">
+            <div class="item-name">پیتزا چهارفصل ویژه</div>
+            <div class="desc">رست بیف، پپرونی، مرغ، ژامبون، قارچ، پنیر</div>
+            <div class="sizes">D:2650 | F:2650 T</div>
+          </article>
+          <article class="item">
+            <div class="item-name">پیتزا ارمنی شکاری</div>
+            <div class="desc">بیکن، سوسیس شکاری، گوشت همبر، قارچ، پنیر</div>
+            <div class="sizes">D:1250 | F:2650 T</div>
+          </article>
+        </section>
+      </div>
+
+      <!-- ستون ۲ -->
+      <div class="col-flex">
+        <section class="section">
+          <div class="section-title">🍔 برگرها</div>
+          <article class="item">
+            <div class="item-head"><div class="item-name">برگ کلاسیک</div><div class="price">480 T</div></div>
+            <div class="desc">برگر گوشت، کاهو، گوجه، خیارشور، سس</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">ماشروم برگر</div><div class="price">580 T</div></div>
+            <div class="desc">برگر گوشت، سس آلفردو، قارچ، کاهو</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">ماشروم زینگر</div><div class="price">580 T</div></div>
+            <div class="desc">فیله استریپس، سس آلفردو، کاهو، گوجه</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">دبل دان برگر</div><div class="price">890 T</div></div>
+            <div class="desc">برگر گوشت، استریپس، پنیر گودا، سس آلفردو</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">چریتسو برگر</div><div class="price">850 T</div></div>
+            <div class="desc">برگر گوشت، سوسیس چوریتسو، پنیر گودا</div>
+          </article>
+        </section>
+
+        <section class="section gold">
+          <div class="section-title">🍗 سوخاری‌ها</div>
+          <article class="item">
+            <div class="item-name">فیله استریپس</div>
+            <div class="desc">فیله سوخاری، سیب‌زمینی، سالاد کلم، نان، سس</div>
+            <div class="sizes">2Pcs:650 | 4Pcs:890 T</div>
+          </article>
+          <article class="item">
+            <div class="item-name">بال و بازو</div>
+            <div class="desc">بال و بازو، سیب‌زمینی، سالاد کلم، نان، سس</div>
+            <div class="sizes">6Pcs:750 T</div>
+          </article>
+          <article class="item">
+            <div class="item-name">سوخاری ترکیبی</div>
+            <div class="desc">استریپس، بال و بازو، سیب‌زمینی، سالاد کلم</div>
+            <div class="sizes">6Pcs:950 T</div>
+          </article>
+        </section>
+      </div>
+
+      <!-- ستون ۳ -->
+      <div class="col-flex">
+        <section class="section gold">
+          <div class="section-title">🌭 ساندویچ و هات‌داگ</div>
+          <article class="item">
+            <div class="item-head"><div class="item-name">هات داگ</div><div class="price">350 T</div></div>
+            <div class="desc">هات‌داگ، نون ۳۰ سانتی، کاهو، گوجه</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">هات داگ ویژه</div><div class="price">490 T</div></div>
+            <div class="desc">هات‌داگ، قارچ و پنیر، کاهو، گوجه، خیارشور</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">ساندویچ سرد</div><div class="price">490 T</div></div>
+            <div class="desc">ژامبون گوشت و مرغ، کاهو، گوجه، مایونز</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">ساندویچ ژامبون تنوری</div><div class="price">590 T</div></div>
+            <div class="desc">ژامبون تنوری، قارچ، پنیر، کاهو، گوجه</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">ساندویچ ویژه هیولا</div><div class="price">990 T</div></div>
+            <div class="desc">برگر، ژامبون، هات‌داگ، فیله گریل، قارچ و پنیر</div>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-title">🥗 سالاد و پیش‌غذا</div>
+          <article class="item">
+            <div class="item-head"><div class="item-name">سالاد سزار (سوخاری)</div><div class="price">650 T</div></div>
+            <div class="desc">فیله سوخاری، کاهو، سس سزار، پنیر پارمسان</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">سالاد سزار (گریل)</div><div class="price">590 T</div></div>
+            <div class="desc">فیله گریل، کاهو، سس سزار، پنیر پارمسان</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">سیب زمینی ۲۵۰ گرمی</div><div class="price">300 T</div></div>
+            <div class="desc">سیب‌زمینی سرخ شده با سس مخصوص</div>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="info">
+        <h3>منوی آنلاین</h3>
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fpizza-paz.ir" alt="QR">
+        <p class="qr-label">pizza-paz.ir</p>
+      </div>
+      <div class="info">
+        <h3>شماره تماس</h3>
+        <p class="phone">0913 492 7300</p>
+      </div>
+      <div class="info">
+        <h3>آدرس</h3>
+        <p style="font-size: 2.1mm;">خیابان اصلی گوهردشت،<br>۱۲ شرقی، جنب خشکشویی</p>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<!-- صفحه دوم: (فقط اسنک و سالاد برای تکمیل) -->
+<main class="page">
+  <div class="bg-img-pizza" style="background-image: url('/images/products/strips.jpg'); top: 50%;"></div>
+  <div class="inner">
+    <header class="header">
+      <div class="brand-block">
+        <div class="logo-wrap"><img src="/images/chef-hero.png" alt="Chef"></div>
+        <div class="brand-text">
+          <h1>PIZZA <span>PAZ</span></h1>
+          <p>منوی رسمی رستوران</p>
+        </div>
+      </div>
+      <div class="slogan-block">
+        <h2>Good Food<br><span>Good Mood</span></h2>
+      </div>
+    </header>
+
+    <div class="columns">
+      <div class="col-flex">
+        <section class="section">
+          <div class="section-title">🍟 اسنک‌ها</div>
+          <article class="item">
+            <div class="item-head"><div class="item-name">اسنک مخلوط</div><div class="price">350 T</div></div>
+            <div class="desc">ژامبون، قارچ، پنیر، فلفل دلمه، سس</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">اسنک چیکن</div><div class="price">390 T</div></div>
+            <div class="desc">مرغ گریل، قارچ، پنیر، فلفل دلمه، سس</div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">اسنک چهارفصل</div><div class="price">450 T</div></div>
+            <div class="desc">رست بیف، مرغ، ژامبون، پپرونی، قارچ</div>
+          </article>
+        </section>
+      </div>
+      <div class="col-flex">
+         <section class="section gold">
+          <div class="section-title">🍽 پیش‌غذاها</div>
+          <article class="item">
+            <div class="item-head"><div class="item-name">قارچ سوخاری ۲۵۰ گرمی</div><div class="price">390 T</div></div>
+          </article>
+          <article class="item">
+            <div class="item-head"><div class="item-name">سیب زمینی ۲۵۰ گرمی</div><div class="price">300 T</div></div>
+          </article>
+        </section>
+      </div>
+      <div class="col-flex"></div>
+    </div>
+    
+    <footer class="footer">
+      <div class="info">
+        <h3>منوی آنلاین</h3>
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fpizza-paz.ir" alt="QR">
+        <p class="qr-label">pizza-paz.ir</p>
+      </div>
+      <div class="info">
+        <h3>شماره تماس</h3>
+        <p class="phone">0913 492 7300</p>
+      </div>
+      <div class="info">
+        <h3>آدرس</h3>
+        <p style="font-size: 2.1mm;">خیابان اصلی گوهردشت،<br>۱۲ شرقی، جنب خشکشویی</p>
+      </div>
+    </footer>
+  </div>
+</main>
+</body>
+</html>

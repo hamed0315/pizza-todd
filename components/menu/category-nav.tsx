@@ -1,3 +1,4 @@
+
 "use client"
 
 import { motion } from "framer-motion"
@@ -10,42 +11,61 @@ type Props = {
 
 export function CategoryNav({ active, onChange }: Props) {
   return (
-    <nav
-      aria-label="دسته‌بندی منو"
-      className="sticky top-16 z-30 border-b border-white/5 bg-zinc-950/85 backdrop-blur-md"
-    >
-      <div className="mx-auto max-w-6xl">
-        <ul className="no-scrollbar flex gap-2 overflow-x-auto px-4 py-3" role="tablist">
-          {categories.map((cat) => {
-            const isActive = cat.id === active
-            return (
-              <li key={cat.id} className="shrink-0">
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={isActive}
-                  onClick={() => onChange(cat.id)}
-                  className={`relative rounded-full px-5 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-amber-500 ${
-                    isActive ? "text-white" : "text-zinc-400 hover:text-white"
+    <nav className="w-full overflow-x-auto py-4 scrollbar-hide" aria-label="دسته‌بندی‌ها">
+      <ul className="flex items-center gap-6 px-4 min-w-max md:justify-center">
+        {categories.map((cat) => {
+          const isActive = active === cat.id
+          return (
+            <li key={cat.id} className="flex flex-col items-center">
+              <button
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => onChange(cat.id)}
+                className="group relative flex flex-col items-center gap-2 outline-none"
+              >
+                {/* دایره */}
+                <div
+                  className={`relative flex size-20 items-center justify-center rounded-full border transition-all duration-300 ${
+                    isActive
+                      ? "border-red-500 bg-red-500/10 shadow-[0_0_20px_rgba(239,68,68,0.4)]"
+                      : "border-white/10 bg-white/5 group-hover:border-white/20 group-hover:bg-white/10"
                   }`}
                 >
-                  {isActive && (
-                    <motion.span
-                      layoutId="category-pill"
-                      className="absolute inset-0 rounded-full bg-red-600 shadow-[0_0_20px_-4px] shadow-red-600/80"
-                      transition={{ type: "spring", stiffness: 420, damping: 32 }}
+                  {/* آیکون وسط‌چین */}
+                  {cat.icon && (
+                    <img
+                      src={cat.icon}
+                      alt={cat.title}
+                      className={`size-12 object-contain transition-transform duration-300 ${
+                        isActive ? "scale-110 drop-shadow-2xl" : "group-hover:scale-110"
+                      }`}
                     />
                   )}
-                  {!isActive && (
-                    <span className="absolute inset-0 rounded-full border border-white/10 bg-white/5" />
+                  
+                  {/* متن برای دسته بدون آیکون (همه) */}
+                  {!cat.icon && (
+                    <span className={`text-sm font-bold ${isActive ? "text-white" : "text-zinc-400"}`}>
+                      {cat.title}
+                    </span>
                   )}
-                  <span className="relative">{cat.label}</span>
-                </button>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
+                </div>
+
+                {/* متن زیر دایره */}
+                {cat.icon && (
+                  <span
+                    className={`text-xs font-bold transition-colors ${
+                      isActive ? "text-red-500" : "text-zinc-400 group-hover:text-white"
+                    }`}
+                  >
+                    {cat.title}
+                  </span>
+                )}
+              </button>
+            </li>
+          )
+        })}
+      </ul>
     </nav>
   )
 }

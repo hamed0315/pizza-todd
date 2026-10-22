@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>PIZZA PAZ | QR Cards</title>
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+    @page { size: A4 portrait; margin: 0; }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { margin: 0; padding: 0; background-color: #fff; font-family: 'Vazirmatn', sans-serif; }
+    
+    .page {
+        width: 210mm; height: 297mm; background: #fff; padding: 15mm;
+        display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 1fr);
+        gap: 5mm; align-content: center;
+    }
+
+    .card {
+        width: 85mm; height: 55mm;
+        background-color: #09090b;
+        border: 1px solid #d4af37;
+        border-radius: 3mm;
+        display: flex; flex-direction: row-reverse;
+        align-items: center; justify-content: space-between;
+        padding: 5mm; position: relative; overflow: hidden;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* افکت درخشش پشت کارت */
+    .card::before {
+        content: ''; position: absolute; top: -20mm; right: -20mm; width: 50mm; height: 50mm;
+        background: radial-gradient(circle, rgba(220, 38, 38, 0.3) 0%, transparent 70%);
+        border-radius: 50%; z-index: 0;
+    }
+
+    .qr-side { z-index: 1; background: #fff; padding: 1.5mm; border-radius: 2mm; }
+    .qr-side img { width: 30mm; height: 30mm; display: block; }
+
+    .text-side { z-index: 1; display: flex; flex-direction: column; justify-content: center; }
+    
+    .brand {
+        font-family: 'Bebas Neue', sans-serif; font-size: 7mm; line-height: 1;
+        color: #fff; letter-spacing: 1px; margin-bottom: 2mm;
+    }
+    .brand span { color: #d4af37; }
+    
+    .desc {
+        font-size: 2.5mm; color: #a1a1aa; line-height: 1.4; margin-bottom: 3mm;
+        max-width: 35mm;
+    }
+
+    .action {
+        font-size: 2.2mm; font-weight: bold; color: #d4af37;
+        display: flex; align-items: center; gap: 1mm;
+    }
+    .action::before { content: '←'; font-size: 3mm; }
+</style>
+</head>
+<body>
+
+<div class="page">
+    <!-- کارت ۱ -->
+    <div class="card">
+        <div class="qr-side">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpizza-paz.ir" alt="QR">
+        </div>
+        <div class="text-side">
+            <div class="brand">PIZZA <span>PAZ</span></div>
+            <div class="desc">منوی کامل غذاها، عکس‌ها و سفارش آنلاین</div>
+            <div class="action">اسکن کنید</div>
+        </div>
+    </div>
+
+    <!-- کارت ۲ -->
+    <div class="card">
+        <div class="qr-side"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpizza-paz.ir" alt="QR"></div>
+        <div class="text-side">
+            <div class="brand">PIZZA <span>PAZ</span></div>
+            <div class="desc">منوی کامل غذاها، عکس‌ها و سفارش آنلاین</div>
+            <div class="action">اسکن کنید</div>
+        </div>
+    </div>
+
+    <!-- کارت ۳ -->
+    <div class="card">
+        <div class="qr-side"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpizza-paz.ir" alt="QR"></div>
+        <div class="text-side">
+            <div class="brand">PIZZA <span>PAZ</span></div>
+            <div class="desc">منوی کامل غذاها، عکس‌ها و سفارش آنلاین</div>
+            <div class="action">اسکن کنید</div>
+        </div>
+    </div>
+
+    <!-- کارت ۴ -->
+    <div class="card">
+        <div class="qr-side"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpizza-paz.ir" alt="QR"></div>
+        <div class="text-side">
+            <div class="brand">PIZZA <span>PAZ</span></div>
+            <div class="desc">منوی کامل غذاها، عکس‌ها و سفارش آنلاین</div>
+            <div class="action">اسکن کنید</div>
+        </div>
+    </div>
+
+    <!-- کارت ۵ -->
+    <div class="card">
+        <div class="qr-side"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpizza-paz.ir" alt="QR"></div>
+        <div class="text-side">
+            <div class="brand">PIZZA <span>PAZ</span></div>
+            <div class="desc">منوی کامل غذاها، عکس‌ها و سفارش آنلاین</div>
+            <div class="action">اسکن کنید</div>
+        </div>
+    </div>
+
+    <!-- کارت ۶ -->
+    <div class="card">
+        <div class="qr-side"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpizza-paz.ir" alt="QR"></div>
+        <div class="text-side">
+            <div class="brand">PIZZA <span>PAZ</span></div>
+            <div class="desc">منوی کامل غذاها، عکس‌ها و سفارش آنلاین</div>
+            <div class="action">اسکن کنید</div>
+        </div>
+    </div>
+
+    <!-- کارت ۷ -->
+    <div class="card">
+        <div class="qr-side"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpizza-paz.ir" alt="QR"></div>
+        <div class="text-side">
+            <div class="brand">PIZZA <span>PAZ</span></div>
+            <div class="desc">منوی کامل غذاها، عکس‌ها و سفارش آنلاین</div>
+            <div class="action">اسکن کنید</div>
+        </div>
+    </div>
+
+    <!-- کارت ۸ -->
+    <div class="card">
+        <div class="qr-side"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpizza-paz.ir" alt="QR"></div>
+        <div class="text-side">
+            <div class="brand">PIZZA <span>PAZ</span></div>
+            <div class="desc">منوی کامل غذاها، عکس‌ها و سفارش آنلاین</div>
+            <div class="action">اسکن کنید</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

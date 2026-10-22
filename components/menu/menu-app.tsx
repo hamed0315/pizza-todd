@@ -1,48 +1,73 @@
+
 "use client"
 
 import { useState } from "react"
-import { AnimatePresence, LayoutGroup } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 import { CartProvider } from "./cart-context"
-import { SiteHeader } from "./site-header"
-import { Hero } from "./hero"
 import { CategoryNav } from "./category-nav"
 import { ProductCard } from "./product-card"
-import { CartDrawer, FloatingCart } from "./floating-cart"
-import { categories, products, type CategoryId } from "@/lib/menu-data"
+import { Hero } from "./hero"
+import { SiteHeader } from "./site-header"
+import { FloatingCart } from "./floating-cart"
+import { Footer } from "./footer"
+import { ProductSheet } from "./product-sheet"
+import { CartSheet } from "./cart-sheet"
+import { LoadingScreen } from "./loading-screen"
+import { categories, products, type CategoryId, type Product } from "@/lib/menu-data"
 
 export function MenuApp() {
   const [active, setActive] = useState<CategoryId>("all")
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+  const [isCartOpen, setIsCartOpen] = useState(false)
+  
   const visible = active === "all" ? products : products.filter((p) => p.category === active)
-  const activeLabel = categories.find((c) => c.id === active)?.label
+  const activeLabel = categories.find((c) => c.id === active)?.title
 
   return (
     <CartProvider>
-      <SiteHeader />
-      <main className="pb-28 md:pb-12">
+      <LoadingScreen />
+      {/* دکمه باز کردن سبد خرید به هدر پاس داده میشه */}
+      <SiteHeader onCartOpen={() => setIsCartOpen(true)} />
+      
+      <main className="mx-auto max-w-6xl pb-24">
         <Hero />
-        <CategoryNav active={active} onChange={setActive} />
+        
+        <div className="sticky top-0 z-30 bg-zinc-950/80 backdrop-blur-md bg-zinc-950/90 border-y border-white/5">
+          <CategoryNav active={active} onChange={setActive} />
+        </div>
 
-        <section aria-labelledby="menu-heading" className="mx-auto max-w-6xl px-4 pt-6">
-          <div className="mb-4 flex items-end justify-between">
-            <h2 id="menu-heading" className="font-display text-3xl text-white">
-              {active === "all" ? "منوی تاد" : activeLabel}
-            </h2>
-            <span className="text-xs text-zinc-500">{`${new Intl.NumberFormat("fa-IR").format(visible.length)} آیتم`}</span>
+        <section className="px-4 pt-6">
+          <h2 className="mb-4 text-xl font-bold text-white">
+            {active === "all" ? "همه محصولات" : activeLabel}
+          </h2>
+          
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            
+              {visible.map((product, index) => (
+                <ProductCard 
+                  key={product.id} 
+                  product={product} 
+                  index={index} 
+                  onOpen={setSelectedProduct} 
+                />
+              ))}
+            
           </div>
-
-          <LayoutGroup>
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
-              <AnimatePresence mode="popLayout">
-                {visible.map((product, i) => (
-                  <ProductCard key={product.id} product={product} index={i} />
-                ))}
-              </AnimatePresence>
-            </div>
-          </LayoutGroup>
+          
+          {visible.length === 0 && (
+            <p className="py-20 text-center text-zinc-500">محصولی در این دسته‌بندی یافت نشد.</p>
+          )}
         </section>
       </main>
-      <FloatingCart />
-      <CartDrawer />
+      
+      <Footer />
+      
+      {/* دکمه شناور سبد خرید هم بهش پاس داده میشه */}
+      <FloatingCart onCartOpen={() => setIsCartOpen(true)} />
+      
+      {/* مودال‌های پایین صفحه */}
+      <CartSheet isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      <ProductSheet product={selectedProduct} onClose={() => setSelectedProduct(null)} />
     </CartProvider>
   )
 }
