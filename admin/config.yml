@@ -1,7 +1,4 @@
 
-# این خط به Decap میگه: کلاً Netlify رو بیخیال شو و فقط کادر توکن رو نشون بده
-manual_init: true
-
 backend:
   name: github
   repo: hamed0315/pizza-todd
