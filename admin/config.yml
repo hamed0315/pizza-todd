@@ -1,12 +1,11 @@
 
 backend:
   name: github
-  repo: hamed0315/pizza-todd # نام ریپازیتوری و یوزرنیم خودت
+  repo: hamed0315/pizza-todd
   branch: main
-  base_url: https://api.netlify.com # برای لاگین امن گیت هاب
 
-media_folder: "public/images/products" # مسیر ذخیره عکس‌ها
-public_folder: "/images/products" # مسیری که سایت عکس‌ها رو از اون می‌خونه
+media_folder: "public/images/products"
+public_folder: "/images/products"
 
 collections:
   - name: "menu"
@@ -20,7 +19,7 @@ collections:
             name: "products"
             widget: "list"
             fields:
-              - {label: "شناسه", name: "id", widget: "string"}
+              - {label: "شناسه (ID)", name: "id", widget: "string"}
               - {label: "نام غذا", name: "title", widget: "string"}
               - {label: "توضیحات", name: "description", widget: "text"}
               - {label: "دسته‌بندی", name: "category", widget: "select", options: ["pizza", "burger", "sandwich", "fried", "salad", "sides"]}
