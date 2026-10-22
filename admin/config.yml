@@ -14,6 +14,7 @@ collections:
       - label: "آیتم‌های منو"
         name: "products"
         file: "public/data/menu.json"
+        format: json  # 👈 این خط اضافه شد
         fields:
           - label: "محصولات"
             name: "products"
@@ -32,7 +33,7 @@ collections:
                 fields:
                   - {label: "نام سایز", name: "label", widget: "string"}
                   - {label: "قیمت", name: "price", widget: "number"}
-              - label: "برچسب (مثل تند، پرفروش)"
+              - label: "برچسب"
                 name: "badges"
                 widget: "list"
                 required: false
