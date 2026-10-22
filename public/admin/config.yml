@@ -14,30 +14,37 @@ collections:
       - label: "آیتم‌های منو"
         name: "products"
         file: "public/data/menu.json"
-        format: json  # 👈 این خط اضافه شد
+        format: json
         fields:
-          - label: "محصولات"
+          - label: "لیست محصولات"
             name: "products"
             widget: "list"
+            # 👇 این خط باعث میشه توی لیست، اسم غذا و قیمت با هم دیده بشن
+            summary: "{{fields.title}} | {{fields.price}} تومان" 
             fields:
-              - {label: "شناسه (ID)", name: "id", widget: "string"}
-              - {label: "نام غذا", name: "title", widget: "string"}
-              - {label: "توضیحات", name: "description", widget: "text"}
+              - {label: "شناسه (انگلیسی و بدون فاصله)", name: "id", widget: "string", hint: "مثلا: pizza-mokhlot"}
+              - {label: "نام غذا", name: "title", widget: "string", hint: "مثلا: پیتزا مخلوط"}
+              - {label: "مواد اولیه", name: "description", widget: "text", hint: "مواد را با کاما (،) از هم جدا کنید"}
               - {label: "دسته‌بندی", name: "category", widget: "select", options: ["pizza", "burger", "sandwich", "fried", "salad", "sides"]}
-              - {label: "قیمت پایه (تومان)", name: "price", widget: "number"}
-              - {label: "تصویر غذا", name: "image", widget: "image"}
+              - {label: "قیمت پایه (تومان)", name: "price", widget: "number", value_type: "int"}
+              - {label: "تصویر غذا", name: "image", widget: "image", hint: "از پوشه products عکس انتخاب کنید"}
+              
               - label: "سایزها (فقط برای پیتزا)"
                 name: "sizes"
                 widget: "list"
                 required: false
+                hint: "اگر پیتزا نیست، این بخش را خالی بگذارید"
                 fields:
-                  - {label: "نام سایز", name: "label", widget: "string"}
-                  - {label: "قیمت", name: "price", widget: "number"}
-              - label: "برچسب"
+                  - {label: "نام سایز", name: "label", widget: "string", hint: "مثلا: مینی، تک نفره، دونفره"}
+                  - {label: "قیمت", name: "price", widget: "number", value_type: "int"}
+                  
+              - label: "برچسب‌ها"
                 name: "badges"
                 widget: "list"
                 required: false
+                hint: "مثلا: تند، پرفروش، جدید"
                 fields:
-                  - {label: "متن", name: "label", widget: "string"}
+                  - {label: "متن برچسب", name: "label", widget: "string"}
                   - {label: "رنگ", name: "tone", widget: "select", options: ["spicy", "hot", "new", "veggie"]}
-              - {label: "پیشنهاد ویژه؟", name: "featured", widget: "boolean", required: false}
+                  
+              - {label: "آیا پیشنهاد ویژه است؟", name: "featured", widget: "boolean", required: false, default: false}
