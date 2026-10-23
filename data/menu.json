@@ -5,7 +5,7 @@
       "title": "پیتزا مخلوط",
       "description": "ژامبون گوشت، مرغ، قارچ، پنیر، فلفل دلمه، زیتون",
       "category": "pizza",
-      "price": 890000,
+      "price": 520000,
       "image": "/images/products/pizza-mokhlot.jpg",
       "sizes": [
         {
@@ -33,7 +33,7 @@
       "title": "پیتزا چیکن",
       "description": "مرغ گریل، قارچ، پنیر، فلفل دلمه، زیتون",
       "category": "pizza",
-      "price": 990000,
+      "price": 590000,
       "image": "/images/products/pizza-chicken.jpg",
       "sizes": [
         {
@@ -66,7 +66,7 @@
       "title": "پیتزا چیکن آلفردو",
       "description": "مرغ گریل، سس آلفردو، سیب‌زمینی، قارچ، پنیر",
       "category": "pizza",
-      "price": 1090000,
+      "price": 720000,
       "image": "/images/products/pizza-chicken.jpg",
       "sizes": [
         {
@@ -94,7 +94,7 @@
       "title": "پیتزا هات چیز",
       "description": "ژامبون، هات‌داگ، سیب‌زمینی، پنیر چدار، قارچ",
       "category": "pizza",
-      "price": 1190000,
+      "price": 720000,
       "image": "/images/products/pizza-hot-cheese.jpg",
       "sizes": [
         {
@@ -127,7 +127,7 @@
       "title": "پیتزا رست بیف",
       "description": "گوشت رست، قارچ، پنیر، فلفل دلمه، زیتون",
       "category": "pizza",
-      "price": 990000,
+      "price": 890000,
       "image": "/images/products/pizza-roast-beef.jpg",
       "sizes": [
         {
@@ -155,7 +155,7 @@
       "title": "پیتزا پپرونی",
       "description": "پپرونی، قارچ، هالوپینو، پنیر، فلفل دلمه",
       "category": "pizza",
-      "price": 990000,
+      "price": 590000,
       "image": "/images/products/pizza-pepperoni.jpg",
       "sizes": [
         {
