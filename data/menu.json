@@ -50,7 +50,7 @@
         },
         {
           "label": "خانواده",
-          "price": 2290000
+          "price": 2360000
         }
       ],
       "badges": [
@@ -340,7 +340,7 @@
       "title": "دبل چیز برگر",
       "description": "همبرگر ۱۰۰٪ ۲ عدد، پنیر گودا ۲ لایه، پنیر موزارلا ۳ لایه، گوجه، کاهو، خیارشور، سیب تنوری",
       "category": "burger",
-      "price": 1900000,
+      "price": 1090000,
       "image": "/images/products/double-down.jpg",
       "sizes": [],
       "badges": [
@@ -367,7 +367,7 @@
       "title": "هات داگ ویژه",
       "description": "هات‌داگ، قارچ و پنیر، کاهو، گوجه",
       "category": "sandwich",
-      "price": 590000,
+      "price": 620000,
       "image": "/images/products/hot-dog-special.jpg",
       "sizes": [],
       "badges": [],
@@ -378,7 +378,7 @@
       "title": "ساندویچ سرد",
       "description": "ژامبون گوشت و مرغ، نون ۳۰ سانتی، کاهو، گوجه، مایونز",
       "category": "sandwich",
-      "price": 690000,
+      "price": 490000,
       "image": "/images/products/cold-sandwich.jpg",
       "sizes": [],
       "badges": [],
@@ -389,7 +389,7 @@
       "title": "ساندویچ ژامبون تنوری",
       "description": "ژامبون تنوری، قارچ، پنیر، کاهو",
       "category": "sandwich",
-      "price": 790000,
+      "price": 690000,
       "image": "/images/products/ham-sandwich.jpg",
       "sizes": [],
       "badges": [],
@@ -400,7 +400,7 @@
       "title": "هات داگ تنوری",
       "description": "ژامبون گوشت، ژامبون تنوری، پنیر",
       "category": "sandwich",
-      "price": 980000,
+      "price": 750000,
       "image": "/images/products/hot-dog.jpg",
       "sizes": [],
       "badges": [],
@@ -411,7 +411,7 @@
       "title": "ساندویچ ویژه هیولا",
       "description": "برگر، ژامبون، هات‌داگ، فیله گریل، نون ۳۰ سانتی، قارچ",
       "category": "sandwich",
-      "price": 1290000,
+      "price": 1100000,
       "image": "/images/products/monster-sandwich.jpg",
       "sizes": [],
       "badges": [
@@ -575,7 +575,7 @@
       "title": "سینی دورهمی ۶ الی ۸ نفره",
       "description": "پیتزا مخلوط، فیله سوخاری، بال و بازو سوخاری، قارچ سوخاری، همبرگر، هات داگ، سیب زمینی سرخ شده، سیب تنوری، اسنک، پک سس مخصوص، نان مک",
       "category": "sides",
-      "price": 3900000,
+      "price": 3200000,
       "image": "/images/products/pizza-mokhlot.jpg",
       "sizes": [],
       "badges": [
